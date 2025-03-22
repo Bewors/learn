@@ -20,3 +20,4 @@ for i in range(len(B)):
     else:
         print(0,end=" ") 
         #[кал]
+        #[эщкере]
