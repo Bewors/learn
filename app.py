@@ -21,3 +21,4 @@ for i in range(len(B)):
         print(0,end=" ") 
         #[кал]
         #[эщкере]
+        #[123]
