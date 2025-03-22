@@ -18,4 +18,5 @@ for i in range(len(B)):
     if lb < len(A) and A[lb] == B[i]:
         print(lb+1,end=" ")
     else:
-        print(0,end=" ")    
+        print(0,end=" ") 
+        #[кал]
