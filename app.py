@@ -1,28 +1,21 @@
-
 n = int(input())
-a = n
-p = []
-d = 2
-count = 1
-count_pow = []
-count_save = 1
-while d * d <= n:
-    if n % d == 0:
-        p.append(d)
-        n //= d 
+A = list (map(int,input().split()))
+k = int(input())
+B = list (map(int,input().split()))
+
+def lower_bound(A, key):
+    left = - 1
+    right = len(A)
+    while right > left + 1:
+        middle  = (left + right) // 2
+        if A[middle] >= key :
+            right = middle
+        else:
+            left = middle
+    return right               
+for i in range(len(B)):
+    lb = lower_bound(A, B[i])
+    if lb < len(A) and A[lb] == B[i]:
+        print(lb+1,end=" ")
     else:
-        d+=1
-p.append(n)
-p.append(a)
-for i in range(len(p)-1):
-    if p[i] == p[i+1]:
-        count+=1   
-    else :
-        print(f'{p[i]} {count}')
-        count = 1
-        
-
-    
-
-
-
+        print(0,end=" ")    
